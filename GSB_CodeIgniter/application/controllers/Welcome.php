@@ -20,6 +20,12 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->database();
+		$this->load->model('classConnexion');
+		$data['medicaments'] = null;
+		if($this->classConnexion->getConnexion() != false){
+			$data['medicaments']=$this->classConnexion->getMedicaments();
+		}
+		$this->load->view('formMEDICAMENT',$data);
 	}
 }
