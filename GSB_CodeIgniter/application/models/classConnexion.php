@@ -14,7 +14,7 @@ class ClassConnexion extends CI_Model {
 		//on interroge la base
 		$sql = "SELECT * FROM medicament";
 		$query = $this->db->query($sql);
-		return $query->result_array();
+		return $query->result();
 	}
 }
 ?>

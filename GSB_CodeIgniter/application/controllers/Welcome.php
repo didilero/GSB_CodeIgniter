@@ -22,10 +22,12 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->database();
 		$this->load->model('classConnexion');
-		$data['medicaments'] = null;
 		if($this->classConnexion->getConnexion() != false){
 			$data['medicaments']=$this->classConnexion->getMedicaments();
 		}
+		$this->load->view('entete');
+		$this->load->view('menuCR');
 		$this->load->view('formMEDICAMENT',$data);
+		$this->load->view('pied');
 	}
 }
