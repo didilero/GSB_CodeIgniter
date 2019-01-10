@@ -55,8 +55,9 @@
 					'class'=>'zone'
 				);
 				echo form_label('DEPOT LEGAL :',$attributesDepot).form_input($attributesInputDepot);
-				echo form_label('NOM COMMERCIAL :').form_input($attributesInput);
-				
+				echo form_label('NOM COMMERCIAL :',$attributesDepot).form_input($attributesInput);
+				echo form_label('FAMILLE :',$attributesDepot).form_input(array('type'=>'text','size'=>'3','name'=>'FAM_CODE','class'=>'zone'));
+				echo form_label('COMPOSITION',$attributesDepot).form_textarea(array('rows'=>'5','cols'=>'50','name'=>'MED_COMPOSITION','class'=>'zone'));
 				
 				
 				
